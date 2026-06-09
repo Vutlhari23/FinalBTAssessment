@@ -42,11 +42,11 @@ function validateEmailOne(){
 
     for(let i = 0; i < emailddeskTop.length; i++){
 
-        if(email[i] === "@"){
+        if(emailddeskTop[i] === "@"){
             atSign++;
         }
 
-        if(email[i] === "."){
+        if(emailddeskTop[i] === "."){
             dotSign++;
         }
     }
