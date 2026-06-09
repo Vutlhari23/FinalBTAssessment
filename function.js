@@ -35,7 +35,7 @@ function validateEmail(){
 }
 function validateEmailOne(){
 
-    let email = document.getElementById("emailddeskTop").value;
+    let emailddeskTop = document.getElementById("emailddeskTop").value;
 
     let atSign = 0;
     let dotSign = 0;
