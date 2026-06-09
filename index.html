@@ -1,202 +1,12 @@
-use this <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <title>Newsletter Signup</title>
 
-<style>
-
-body{
-    background-color: hsl(234, 29%, 20%);
-    color: hsl(234, 29%, 20%);
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-
-    margin:0;
-    padding:20px;
-    box-sizing:border-box;
-}
-
-#main{
-    display:flex;
-    width:min(900px,100%);
-    background-color:white;
-    border-radius:15px;
-    padding:20px;
-    box-sizing:border-box;
-}
-
-#div1{
-    width:60%;
-    padding:20px;
-    box-sizing:border-box;
-}
-
-#div2{
-    width:40%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-img{
-    max-width:100%;
-    height:auto;
-    display:block;
-}
-
-button{
-    background-color:hsl(234, 29%, 20%);
-    color:white;
-    width:100%;
-    height:50px;
-    border-radius:5px;
-    border:none;
-    cursor:pointer;
-}
-
-h1{
-    color:hsl(234, 29%, 20%);
-    font-size:3rem;
-}
-
-input{
-    width:100%;
-    height:50px;
-    margin-bottom:20px;
-    margin-top:10px;
-    border-radius:5px;
-    box-sizing:border-box;
-    padding-left:10px;
-}
-
-.para-images{
-    width:20px;
-    height:20px;
-    margin-right:5px;
-    display:inline-block;
-    vertical-align:middle;
-}
-#err{
-    color:red;
-    font-size:0.9rem;
-
-}
-
-/* Mobile version */
-
-#main1{
-    display:none;
-    width:min(450px,100%);
-    background-color:white;
-    border-radius:15px;
-    overflow:hidden;
-}
-
-#div21{
-    width:100%;
-}
-
-#div11{
-    padding:25px;
-    box-sizing:border-box;
-}
-
-</style>
-
-<script>
-
-function validateEmail(){
-
-    let email = document.getElementById("email").value;
-
-    let atSign = 0;
-    let dotSign = 0;
-
-    for(let i = 0; i < email.length; i++){
-
-        if(email[i] === "@"){
-            atSign++;
-        }
-
-        if(email[i] === "."){
-            dotSign++;
-        }
-    }
-
-    if(atSign == 1 && dotSign >= 1){
-
-        document.getElementById("email").style.color = "green";
-
-        localStorage.setItem("email", email);
-
-        window.location.href = "thank-u.html";
-
-    }else{
-
-        document.getElementById("email").style.color = "red";
-        document.getElementById("email").style.backgroundColor = "pink";
-    }
-}
-    function validateEmailOne(){
-
-    let email = document.getElementById("email").value;
-
-    let atSign = 0;
-    let dotSign = 0;
-
-    for(let i = 0; i < email.length; i++){
-
-        if(email[i] === "@"){
-            atSign++;
-        }
-
-        if(email[i] === "."){
-            dotSign++;
-        }
-    }
-
-    if(atSign == 1 && dotSign >= 1){
-
-        document.getElementById("email").style.color = "green";
-
-        localStorage.setItem("email", email);
-
-        window.location.href = "thank-u.html";
-
-    }else{
-
-        document.getElementById("email").style.color = "red";
-        document.getElementById("email").style.backgroundColor = "pink";
-    }
-}
+<link rel="stylesheet" href="style.css">
 
 
-function resized(){
-
-    const width = window.innerWidth;
-
-    if(width < 1500){
-
-        document.getElementById('main').style.display = 'none';
-        document.getElementById('main1').style.display = 'block';
-
-    }else{
-
-        document.getElementById('main').style.display = 'flex';
-        document.getElementById('main1').style.display = 'none';
-    }
-}
-
-window.addEventListener('resize', resized);
-window.addEventListener('load', resized);
-
-</script>
 
 </head>
 
@@ -216,7 +26,7 @@ window.addEventListener('load', resized);
         </p>
 
         <p>
-            <img class="para-images" src="icon-success.svg" alt="">
+            <img class="para-images" src="images/icon-success.svg" alt="">
             Measuring to ensure updates are a success
         </p>
 
@@ -296,7 +106,7 @@ window.addEventListener('load', resized);
             <button
                 type="button"
                 id="btn1"
-                onclick="validateEmailOne()">
+                onclick="validateEmail()">
                 Subscribe to monthly newsletter
             </button>
 
@@ -305,6 +115,6 @@ window.addEventListener('load', resized);
     </div>
 
 </div>
-
+<script src="Function.js"></script>
 </body>
 </html>
