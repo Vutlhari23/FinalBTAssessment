@@ -22,7 +22,7 @@ function validateEmail(){
 
         document.getElementById("email").style.color = "green";
 
-        localStorage.setItem("email", email);
+        window.localStorage.setItem("email", email);
 
         window.location.href = "thank-u.html";
 
@@ -55,7 +55,7 @@ function validateEmailOne(){
 
         document.getElementById("emailddeskTop").style.color = "green";
 
-        localStorage.setItem("emailddeskTop", emailddeskTop);
+        window.localStorage.setItem("emailddeskTop", emailddeskTop);
 
         window.location.href = "thank-u.html";
 
