@@ -52,26 +52,26 @@ justify-content: center;
  <script >
 
  window.addEventListener('load', (event) => {
-   let email = localStorage.getItem("email");
+   let email = window.localStorage.getItem("email");
 
    document.getElementById('para').innerHTML = "A conformation email has been sent to "+email+". Please open it and click the button inside the button inside to conform your subscription."
 
 });
 
  function dismiss(){
-   localStorage.clear()
+   window.localStorage.clear()
     window.location.href="index.html"
 
  }
     window.addEventListener('load', (event) => {
-   let emailDesktop = localStorage.getItem("emailDesktop");
+   let emailDesktop = window.localStorage.getItem("emailDesktop");
 
    document.getElementById('para').innerHTML = "A conformation email has been sent to "+emailDesktop+". Please open it and click the button inside the button inside to conform your subscription."
 
 });
 
  function dismiss(){
-   localStorage.clear()
+   window.localStorage.clear()
     window.location.href="index.html"
 
  }
