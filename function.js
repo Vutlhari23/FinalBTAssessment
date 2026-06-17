@@ -55,7 +55,7 @@ function validateEmailOne(){
 
         document.getElementById("emailddeskTop").style.color = "green";
 
-        window.localStorage.setItem("emailddeskTop", emailddeskTop);
+        window.localStorage.setItem("email", emailddeskTop);
 
         window.location.href = "thank-u.html";
 
